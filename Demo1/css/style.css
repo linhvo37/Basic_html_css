@@ -1,0 +1,301 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Roboto, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    background-color: #FFFFFF;
+    color: #212121;
+}
+
+.f-left {
+    float: left;
+}
+.f-right {
+    float: right;
+}
+.clearfix:after {
+    clear: both;
+    content: '';
+    display: block;
+}
+.width-50 {
+    width: 50%;
+}
+.bg-blue {
+    background-color: #0066ff;
+    border: 1px solid #0066ff;
+}
+.bg-gray {
+    background-color: gray;
+    border: 1px solid gray;
+}
+
+
+.container {
+    width: 1140px;
+    margin: auto;
+}
+.header {
+    background-color: #343a40;
+    padding: 7px 0;
+    padding: 10px 0;   
+}
+.header .logo {
+    float: left;
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-top: 5px;
+}
+.header .logo a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+}
+.header nav {
+    float: right;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.header button.bt-menu { 
+    float: right;
+    border: 1px solid #9b9b9b;
+    background-color: transparent;
+    color: #FFFFFF;
+    text-transform: capitalize;
+    padding: 10px 15px;
+    position: relative;
+    cursor: pointer;
+    /* transition-duration: 0.5s; */
+    overflow: hidden;
+}
+.bt-menu:after {
+    content: "";
+    background: #fff;
+    display: block;
+    padding-top: 300%;
+    padding-left: 350%;
+    position: absolute;
+    margin-left: -20px !important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 1s ease;
+
+}
+.bt-menu:active:after {
+    opacity: 1;
+    padding: 0;
+    margin: 0;
+    transition: 0s;
+}
+button.bt-menu:hover {
+    color: #fff;
+    background-color: #5a6268;
+    border-color: #545b62;
+}
+.album-example {
+    text-align: center;
+    padding: 100px 0;
+}
+.album-example h2 {
+    font-size: 40px;
+    font-weight: 300;
+}
+.album-example p {
+    font-size: 19px;
+    line-height: 29px;
+    font-weight: 300;
+}
+.album-example-button {
+    margin: 20px 0;
+}
+.album-example-button button {
+    padding: 10px 15px;
+    color: #FFFFFF;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+}
+button.bg-blue {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+.bg-blue:after {
+    content: '';
+    background: #fff;
+    display: block;
+    padding-top: 50%;
+    padding-left: 120%;
+    position: absolute;
+    margin-top: -20%;
+    margin-left: -30px;
+    opacity: 0;
+    transition: all 1s ease;
+}
+.bg-blue:active:after {
+    opacity: 1;
+    padding: 0;
+    margin-left: 0;
+    transition: 0s;
+}
+.bg-blue:hover {
+    color: #fff;
+    background-color: #0069d9;
+    border-color: #0062cc;
+} 
+button.bg-gray {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+.bg-gray:after {
+    content: '';
+    background: #fff;
+    display: block;
+    padding-top: 50%;
+    padding-right: 120%;
+    position: absolute;
+    margin-top: -30px;
+    margin-left: -30px;
+    opacity: 0;
+    transition: all 0.8s;
+}
+.bg-gray:active:after {
+    opacity: 1;
+    padding: 0;
+    margin-right: 0;
+    transition: 0s; 
+}
+.bg-gray:hover {
+    color: #fff;
+    background-color: #5a6268;
+    border-color: #545b62;
+}
+
+.album {
+    background-color: #f8f9fa;
+    padding: 40px 0;
+}
+.album .album-item {
+    width: 33.33%;
+    float: left;
+    padding: 15px 15px;
+}
+.item-main {
+    border: 1px solid #55595c;
+}
+.album-image {
+    position: relative;
+}
+.album-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    opacity: 1;
+    transition: all 0.5s linear;
+}
+.album-image .image-overlay {
+    /* visibility: hidden; */
+    opacity: 0;  
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.5s linear;
+}
+.text-overlay {
+    color: white;
+    background: rgb(110, 75, 75);
+    font-size: 20px;
+    padding: 20px 10px;
+    overflow: hidden;    
+}
+.album-image:hover .image-overlay {
+    /* visibility: visible; */
+    opacity: 1;
+}
+.album-image:hover img {
+    opacity: 0.5;
+}
+
+.album-text {
+    background-color: #ffffff;
+    padding: 20px;
+    text-align: left;
+    
+}
+.album-text .album-description {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 25px;
+}
+.album-text .album-footer .album-footer-button {
+    width: 50%;
+    float: left;
+    margin-top: 16px;
+}
+.album-footer-button button {
+    background-color: #ffffff;
+    border: 1px solid  #55595c;
+    padding: 5px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    cursor: pointer;
+}
+.album-footer-button button:hover {
+    color: #fff;
+    background-color: #6c757d;
+    border-color: #6c757d;
+}
+.album-footer-time {
+    width: 50%;
+    float: left;
+    margin-top: 22px;
+    text-align: right;
+    font-size: 13px;
+    font-weight: 300;
+}
+
+.footer-text {
+    font-weight: 400;
+    line-height: 25px;
+    margin: 55px 0; 
+    padding: 0 15px;
+}
+.back-to-top {
+    text-align: right;
+    font-weight: 400;
+    margin-top: 55px;
+    padding: 0 15px;
+}
+.back-to-top .a-top { 
+    text-decoration: none;
+    position: relative;
+    transition: all 0.4s linear;
+}
+.a-top:after {
+    content: "\00bb";
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    opacity: 0;
+    position: absolute;
+    bottom: -3px;
+    right: -15px;
+    transition: all 0.4s linear; 
+}
+.a-top:hover {
+    padding-right: 20px;
+}
+.a-top:hover:after {
+    opacity: 1;
+    right: 0;
+}
